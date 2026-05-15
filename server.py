@@ -20,3 +20,6 @@ data = conn.recv(1024)
 print (f"Encrypted data received by server is: {data.decode()}")
 decrypted_text = decrypt_message(data.decode())
 print(f"AFTER Decryption message is: {decrypted_text}")
+
+conn.accept()
+server_socket.close()
